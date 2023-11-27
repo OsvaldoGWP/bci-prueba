@@ -1,0 +1,25 @@
+spring:
+    jpa:
+        hibernate:
+            ddl-auto: create-drop
+        show-sql: true
+
+    datasource:
+        url: jdbc:h2:mem:bci
+        username: osvaldo
+
+    h2:
+        console.enabled: true
+
+logging:
+    level:
+        ROOT: INFO
+        web: DEBUG
+        com.bci: DEBUG
+
+app:
+    regexp:
+        password: '^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{4,8}$'
+    jwt:
+        key: RW4gQXJnZW50aW5hIG5hY8OtClRpZXJyYSBkZSBEaWVnbyB5IExpb25lbApEZSBsb3MgcGliZXMgZGUgTWFsdmluYXMKUXVlIGphbcOhcyBvbHZpZGFyw6kKTm8gdGUgbG8gcHVlZG8gZXhwbGljYXIKUG9ycXVlIG5vIHZhcyBhIGVudGVuZGVyCkxhcyBmaW5hbGVzIHF1ZSBwZXJkaW1vcwpDdcOhbnRvcyBhw7FvcyBsYSBsbG9yw6kKUGVybyBlc28gc2UgdGVybWluw7MKUG9ycXVlIGVuIGVsIE1hcmFjYW7DoQpMYSBmaW5hbCBjb24gbG9zIGJyYXp1Y2FzCkxhIHZvbHZpw7MgYSBnYW5hciBwYXDDoQpNdWNoYWNob3MKQWhvcmEgbm9zIHZvbHZpbW8nIGEgaWx1c2lvbmFyClF1aWVybyBnYW5hciBsYSB0ZXJjZXJhClF1aWVybyBzZXIgY2FtcGXDs24gbXVuZGlhbApZIGVsIERpZWdvCkVuIGVsIGNpZWxvIGxvIHBvZGVtb3MgdmVyCkNvbiBEb24gRGllZ28geSBjb24gTGEgVG90YQpBbGVudMOhbmRvbG8gYSBMaW9uZWw=
+        expiration: 3_600_000
