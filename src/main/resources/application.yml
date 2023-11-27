@@ -11,11 +11,21 @@ spring:
     h2:
         console.enabled: true
 
+    mvc.log-request-details: true
+
 logging:
     level:
         ROOT: INFO
         web: DEBUG
         com.bci: DEBUG
+
+springdoc:
+    default-produces-media-type: application/json
+    swagger-ui:
+        path: /swagger-ui
+        display-request-duration: true
+        doc-expansion: none
+        tryItOutEnabled: false
 
 app:
     regexp:

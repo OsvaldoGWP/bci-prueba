@@ -21,7 +21,8 @@ public class UserUpdateRequest {
 
     public User toEntity(User user) {
         user.setName(name);
-        user.setPhones(phones.stream().map(phoneRequest -> phoneRequest.toEntity(user)).toList());
+        user.getPhones().clear();
+        user.getPhones().addAll(phones.stream().map(phoneRequest -> phoneRequest.toEntity(user)).toList());
         return user;
     }
 
