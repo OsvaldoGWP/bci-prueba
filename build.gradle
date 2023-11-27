@@ -23,6 +23,7 @@ repositories {
 
 ext {
     set('jjwtVersion', '0.12.3')
+    set('openapiVersion', '2.2.0')
 }
 
 dependencies {
@@ -36,6 +37,7 @@ dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-security'
     implementation "io.jsonwebtoken:jjwt-impl:${jjwtVersion}"
     implementation "io.jsonwebtoken:jjwt-jackson:${jjwtVersion}"
+    implementation "org.springdoc:springdoc-openapi-starter-webmvc-ui:${openapiVersion}"
 
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
 }
